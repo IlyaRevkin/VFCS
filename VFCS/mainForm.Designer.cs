@@ -130,7 +130,7 @@ namespace VFCS
             this.tbPassword.Size = new System.Drawing.Size(200, 40);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.TextInput = "";
-            this.tbPassword.TextPreview = "Password";
+            this.tbPassword.TextPreview = "Пароль";
             // 
             // tbLogin
             // 
@@ -149,7 +149,7 @@ namespace VFCS
             this.tbLogin.Size = new System.Drawing.Size(200, 40);
             this.tbLogin.TabIndex = 1;
             this.tbLogin.TextInput = "";
-            this.tbLogin.TextPreview = "Login";
+            this.tbLogin.TextPreview = "Логин";
             // 
             // mainForm
             // 
@@ -171,7 +171,7 @@ namespace VFCS
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.mainForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mainForm_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mainForm_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -65,58 +66,122 @@ namespace VFCS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (tbLogin.Text == "")
-            {
-                MessageBox.Show("Пожалуйста, введите логин");
-            }
-            else
-            {
-                if (false) //TODO Wrong Login
+                try
                 {
-                    MessageBox.Show("Логин введён неверно");
-                    tbLogin.Text = "";
+                        Connection.connection.Open();
+
+                        string sqlExp = "SELECT [login], [password], [role], [id_employee] FROM [dbo].[Login] " +
+                    " join [dbo].[Position] ON [dbo].[Login].[id_position] = [dbo].[Position].[id_position]" +
+                    " WHERE [login]=@login COLLATE Latin1_General_CS_AS";
+                        SqlCommand cmd = new SqlCommand(sqlExp, Connection.connection);
+                        cmd.Parameters.AddWithValue("@login", tbLogin.Text);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+
+                if (tbLogin.Text == "")
+                {
+                    MessageBox.Show("Пожалуйста, введите логин");
                 }
                 else
                 {
-                    if (tbPassword.Text == "")
+                    if (!reader.HasRows)
                     {
-                        MessageBox.Show("Пожалуйста, введит пароль");
+                        MessageBox.Show("Логин введён неверно");
+                        tbLogin.Text = "";
+                        tbPassword.Text = "";
                     }
                     else
                     {
-                        if (false) //TODO Wrong Password
+                        reader.Read();
+
+                        if (tbPassword.Text == "")
                         {
-                            MessageBox.Show("Пароль введён неверно");
-                            tbPassword.Text = "";
+                            MessageBox.Show("Пожалуйста, введит пароль");
                         }
                         else
                         {
-                            switch (true)
+                            if ((string)reader[1] != tbPassword.Text)
                             {
-                                case false:
-                                   Hide();
-                                   break;
+                                MessageBox.Show("Пароль введён неверно");
+                                tbPassword.Text = "";
+                            }
+                            else
+                            {
+                                //Connection.userLogin = tbLogin.Text;
+                                Connection.userEmployeeId = (int)reader[3];
 
-                                case true:
-                                    adminStartForm asf = new adminStartForm();
-                                    asf.Show();
-                                    Hide();
-                                    break;
+                                switch ((string)reader[2])
+                                {
+                                    case "adm":
+                                        Connection.userRole = (string)reader[2];
+                                        Connection.connection.Close();
+                                        reader.Close();
 
-                                default:
-                                    MessageBox.Show("Данному пользователю не присвоина роль");
-                                    break;
+                                        adminStartForm asf = new adminStartForm();
+                                        asf.Show();
+                                        Close();
+                                        break;
+
+                                    case "prm":
+                                        Connection.userRole = (string)reader[2];
+                                        Connection.connection.Close();
+                                        reader.Close();
+
+                                        promotionForm pf = new promotionForm();
+                                        pf.Show();
+                                        Close();
+                                        break;
+
+                                    case "cmn":
+                                        Connection.userRole = (string)reader[2];
+                                        Connection.connection.Close();
+                                        reader.Close();
+
+                                        clientRegForm crf = new clientRegForm();
+                                        crf.Show();
+                                        Close();
+                                        break;
+
+                                    case "ewr":
+                                        Connection.userRole = (string)reader[2];
+                                        Connection.connection.Close();
+                                        reader.Close();
+
+                                        EvaluationWorkerForm ewf = new EvaluationWorkerForm();
+                                        ewf.Show();
+                                        Close();
+                                        break;
+
+                                    case "ssw":
+                                        Connection.userRole = (string)reader[2];
+                                        Connection.connection.Close();
+                                        reader.Close();
+
+                                        serviceWorkerForm swf = new serviceWorkerForm();
+                                        swf.Show();
+                                        Close();
+                                        break;
+
+                                    case null:
+
+                                        break;
+
+                                    default:
+                                        Connection.connection.Close();
+                                        MessageBox.Show("Данному пользователю не присвоина роль");
+                                        break;
+                                }
                             }
                         }
                     }
-                }
+                }   
+                reader.Close();
             }
-        }
-
-        private void mainForm_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                btnLogin_Click(this, null);
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            Connection.connection.Close();
         }
 
         private void mainForm_Load(object sender, EventArgs e)
@@ -149,6 +214,12 @@ namespace VFCS
                 iconButtonSetting.IconColor = Color.Black;
                 iconButtonSetting.ForeColor = Color.White;
             } 
+        }
+
+        private void mainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char)e.KeyChar == (Char)Keys.Enter)
+                btnLogin_Click(this, null);
         }
     }
 }

@@ -101,11 +101,41 @@ namespace VFCS.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon iconICO {
+            get {
+                object obj = ResourceManager.GetObject("iconICO", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_photo {
+            get {
+                object obj = ResourceManager.GetObject("no_photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PromoHappyHoursLogo {
+            get {
+                object obj = ResourceManager.GetObject("PromoHappyHoursLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -127,6 +157,26 @@ namespace VFCS.Properties {
             get {
                 object obj = ResourceManager.GetObject("SettingIconLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap volvo_logo_icon_145762 {
+            get {
+                object obj = ResourceManager.GetObject("volvo_logo_icon_145762", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon volvo_logo_icon_145763 {
+            get {
+                object obj = ResourceManager.GetObject("volvo_logo_icon_145763", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

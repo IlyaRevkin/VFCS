@@ -27,6 +27,7 @@ namespace VFCS
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        [System.Obsolete]
         private void InitializeComponent()
         {
             this.metroButtonPromo = new MetroFramework.Controls.MetroButton();
@@ -40,6 +41,7 @@ namespace VFCS
             this.buttonEdit = new VFCS.Button_();
             this.buttonAdd = new VFCS.Button_();
             this.panelMainContainer = new VFCS.Classes.Style.Controls.Panel_();
+            this.panelMain = new VFCS.Classes.Style.Controls.Panel_();
             this.panelColor1 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButtonSetting = new FontAwesome.Sharp.IconButton();
@@ -52,9 +54,7 @@ namespace VFCS
             this.iconButtonActivePromotion = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconButtonMenu = new FontAwesome.Sharp.IconButton();
-            this.panel_1 = new VFCS.Classes.Style.Controls.Panel_();
-            this.metroScrollBar1 = new MetroFramework.Controls.MetroScrollBar();
-            this.panelMain = new VFCS.Classes.Style.Controls.Panel_();
+            this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTop.SuspendLayout();
             this.metroPanelActivePromo.SuspendLayout();
@@ -63,15 +63,14 @@ namespace VFCS
             this.panelMainContainer.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel_1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.Controls.Add(this.panel2);
+            this.panelTop.Controls.Add(this.panel7);
             this.panelTop.Controls.SetChildIndex(this.pictureBoxLogo, 0);
-            this.panelTop.Controls.SetChildIndex(this.panel2, 0);
+            this.panelTop.Controls.SetChildIndex(this.panel7, 0);
             // 
             // metroButtonPromo
             // 
@@ -162,7 +161,7 @@ namespace VFCS
             this.buttonArchive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonArchive.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonArchive.ForeColor = System.Drawing.Color.White;
-            this.buttonArchive.Location = new System.Drawing.Point(495, 331);
+            this.buttonArchive.Location = new System.Drawing.Point(495, 335);
             this.buttonArchive.Name = "buttonArchive";
             this.buttonArchive.RippleColor = System.Drawing.Color.Black;
             this.buttonArchive.RoundingEnable = true;
@@ -173,6 +172,7 @@ namespace VFCS
             this.buttonArchive.UseDownPressEffectOnClick = false;
             this.buttonArchive.UseRippleEffect = true;
             this.buttonArchive.UseZoomEffectOnHover = false;
+            this.buttonArchive.Click += new System.EventHandler(this.buttonArchive_Click);
             // 
             // buttonDelete
             // 
@@ -188,7 +188,7 @@ namespace VFCS
             this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
-            this.buttonDelete.Location = new System.Drawing.Point(335, 331);
+            this.buttonDelete.Location = new System.Drawing.Point(330, 335);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.RippleColor = System.Drawing.Color.Black;
             this.buttonDelete.RoundingEnable = true;
@@ -199,6 +199,7 @@ namespace VFCS
             this.buttonDelete.UseDownPressEffectOnClick = false;
             this.buttonDelete.UseRippleEffect = true;
             this.buttonDelete.UseZoomEffectOnHover = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
@@ -214,7 +215,7 @@ namespace VFCS
             this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEdit.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
-            this.buttonEdit.Location = new System.Drawing.Point(180, 331);
+            this.buttonEdit.Location = new System.Drawing.Point(175, 335);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.RippleColor = System.Drawing.Color.Black;
             this.buttonEdit.RoundingEnable = true;
@@ -225,6 +226,7 @@ namespace VFCS
             this.buttonEdit.UseDownPressEffectOnClick = false;
             this.buttonEdit.UseRippleEffect = true;
             this.buttonEdit.UseZoomEffectOnHover = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonAdd
             // 
@@ -240,7 +242,7 @@ namespace VFCS
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
-            this.buttonAdd.Location = new System.Drawing.Point(20, 331);
+            this.buttonAdd.Location = new System.Drawing.Point(20, 335);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.RippleColor = System.Drawing.Color.Black;
             this.buttonAdd.RoundingEnable = true;
@@ -251,6 +253,7 @@ namespace VFCS
             this.buttonAdd.UseDownPressEffectOnClick = false;
             this.buttonAdd.UseRippleEffect = true;
             this.buttonAdd.UseZoomEffectOnHover = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // panelMainContainer
             // 
@@ -258,19 +261,26 @@ namespace VFCS
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMainContainer.Controls.Add(this.panelMain);
-            this.panelMainContainer.Controls.Add(this.panel_1);
             this.panelMainContainer.Controls.Add(this.panelColor1);
-            this.panelMainContainer.Location = new System.Drawing.Point(20, 11);
+            this.panelMainContainer.Location = new System.Drawing.Point(20, 10);
             this.panelMainContainer.Name = "panelMainContainer";
-            this.panelMainContainer.Size = new System.Drawing.Size(605, 300);
+            this.panelMainContainer.Size = new System.Drawing.Size(595, 305);
             this.panelMainContainer.TabIndex = 17;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 10);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(595, 295);
+            this.panelMain.TabIndex = 3;
             // 
             // panelColor1
             // 
             this.panelColor1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelColor1.Location = new System.Drawing.Point(0, 0);
             this.panelColor1.Name = "panelColor1";
-            this.panelColor1.Size = new System.Drawing.Size(605, 10);
+            this.panelColor1.Size = new System.Drawing.Size(595, 10);
             this.panelColor1.TabIndex = 0;
             // 
             // panelMenu
@@ -307,6 +317,7 @@ namespace VFCS
             this.iconButtonSetting.Text = "iconButton3";
             this.iconButtonSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonSetting.UseVisualStyleBackColor = true;
+            this.iconButtonSetting.Visible = false;
             // 
             // panel6
             // 
@@ -371,6 +382,7 @@ namespace VFCS
             this.iconButtonArchivePromotion.Text = "Архивные акции";
             this.iconButtonArchivePromotion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonArchivePromotion.UseVisualStyleBackColor = false;
+            this.iconButtonArchivePromotion.Click += new System.EventHandler(this.iconButtonArchivePromotion_Click);
             // 
             // panel4
             // 
@@ -399,10 +411,10 @@ namespace VFCS
             this.iconButtonActivePromotion.Text = "iconButtonActivePromotion";
             this.iconButtonActivePromotion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonActivePromotion.UseVisualStyleBackColor = true;
+            this.iconButtonActivePromotion.Click += new System.EventHandler(this.iconButtonActivePromotion_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.iconButtonMenu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(76, 0);
             this.panel2.Name = "panel2";
@@ -411,53 +423,28 @@ namespace VFCS
             // 
             // iconButtonMenu
             // 
-            this.iconButtonMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButtonMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.iconButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonMenu.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.iconButtonMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
             this.iconButtonMenu.IconColor = System.Drawing.Color.Black;
             this.iconButtonMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonMenu.IconSize = 20;
+            this.iconButtonMenu.IconSize = 25;
             this.iconButtonMenu.Location = new System.Drawing.Point(45, 0);
             this.iconButtonMenu.Name = "iconButtonMenu";
             this.iconButtonMenu.Size = new System.Drawing.Size(45, 45);
-            this.iconButtonMenu.TabIndex = 8;
+            this.iconButtonMenu.TabIndex = 4;
             this.iconButtonMenu.UseVisualStyleBackColor = true;
             this.iconButtonMenu.Click += new System.EventHandler(this.iconButtonMenu_Click);
             // 
-            // panel_1
+            // panel7
             // 
-            this.panel_1.Controls.Add(this.metroScrollBar1);
-            this.panel_1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_1.Location = new System.Drawing.Point(595, 10);
-            this.panel_1.Name = "panel_1";
-            this.panel_1.Size = new System.Drawing.Size(10, 290);
-            this.panel_1.TabIndex = 2;
-            // 
-            // metroScrollBar1
-            // 
-            this.metroScrollBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.metroScrollBar1.LargeChange = 10;
-            this.metroScrollBar1.Location = new System.Drawing.Point(0, 0);
-            this.metroScrollBar1.Maximum = 100;
-            this.metroScrollBar1.Minimum = 0;
-            this.metroScrollBar1.MouseWheelBarPartitions = 10;
-            this.metroScrollBar1.Name = "metroScrollBar1";
-            this.metroScrollBar1.Orientation = MetroFramework.Controls.MetroScrollOrientation.Vertical;
-            this.metroScrollBar1.ScrollbarSize = 10;
-            this.metroScrollBar1.Size = new System.Drawing.Size(10, 290);
-            this.metroScrollBar1.TabIndex = 5;
-            this.metroScrollBar1.UseSelectable = true;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 10);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(595, 290);
-            this.panelMain.TabIndex = 3;
+            this.panel7.Controls.Add(this.iconButtonMenu);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(76, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(90, 45);
+            this.panel7.TabIndex = 4;
             // 
             // promotionForm
             // 
@@ -477,8 +464,7 @@ namespace VFCS
             this.panelMainContainer.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel_1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -491,13 +477,6 @@ namespace VFCS
         private MetroFramework.Controls.MetroButton metroButtonPromo;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton iconButtonMenu;
-        private FontAwesome.Sharp.IconButton iconButtonExit;
-        private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton iconButtonArchivePromotion;
-        private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButtonActivePromotion;
         private System.Windows.Forms.Panel panelWorkSpace;
         public Button_ buttonArchive;
         public Button_ buttonDelete;
@@ -505,11 +484,17 @@ namespace VFCS
         public Button_ buttonAdd;
         public Classes.Style.Controls.Panel_ panelMainContainer;
         private System.Windows.Forms.Panel panelColor1;
+        private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton iconButtonSetting;
         private System.Windows.Forms.Panel panel6;
+        private FontAwesome.Sharp.IconButton iconButtonExit;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel3;
-        private Classes.Style.Controls.Panel_ panel_1;
-        private MetroFramework.Controls.MetroScrollBar metroScrollBar1;
+        private FontAwesome.Sharp.IconButton iconButtonArchivePromotion;
+        private System.Windows.Forms.Panel panel4;
+        private FontAwesome.Sharp.IconButton iconButtonActivePromotion;
+        private System.Windows.Forms.Panel panel7;
+        private FontAwesome.Sharp.IconButton iconButtonMenu;
         private Classes.Style.Controls.Panel_ panelMain;
     }
 }

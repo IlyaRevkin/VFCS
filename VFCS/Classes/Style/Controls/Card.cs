@@ -20,7 +20,7 @@ namespace VFCS
         private int CurtainMinHeight = 50;
 
         private bool MouseEntered = false;
-        private bool MousePressed = false;
+        //private bool MousePressed = false;
 
         StringFormat SF = new StringFormat();
 
@@ -137,7 +137,7 @@ namespace VFCS
         {
             base.OnMouseDown(e);
 
-            MousePressed = true;
+            //MousePressed = true;
 
             Invalidate();
         }
@@ -146,7 +146,7 @@ namespace VFCS
         {
             base.OnMouseUp(e);
 
-            MousePressed = false;
+            //MousePressed = false;
 
             Invalidate();
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VFCS.Forms.Marketer;
 
 namespace VFCS
 {
@@ -16,7 +17,7 @@ namespace VFCS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MyApplicationContext(new promotionForm()));
+            Application.Run(new MyApplicationContext(new mainForm()));
         }
     }
 }

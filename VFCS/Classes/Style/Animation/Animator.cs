@@ -26,7 +26,7 @@ namespace VFCS.Classes.Style.Animation
         public static void Start()
         {
             IsWork = true;
-            Interval = 14; // FPS ~66
+            Interval = 14; // 14 - FPS ~66
 
             AnimatorThread = new Thread(AnimationInvoker)
             {
@@ -43,10 +43,11 @@ namespace VFCS.Classes.Style.Animation
             {
                 AnimationList.RemoveAll(a => a == null || a.Status == Animation.AnimationStatus.Completed);
 
-                Parallel.For(0, Count(), index =>
-                {
-                    AnimationList[index].UpdateFrame();
-                });
+                    Parallel.For(0, Count(), index =>
+                    {
+                        if (index < Count())
+                            AnimationList[index].UpdateFrame();
+                    });
 
                 Thread.Sleep((int)Interval);
             }

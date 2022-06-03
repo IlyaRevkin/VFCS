@@ -30,13 +30,25 @@ namespace VFCS
         private void InitializeComponent()
         {
             this.cardPromotion = new VFCS.Card();
-            this.card2 = new VFCS.Card();
-            this.card3 = new VFCS.Card();
-            this.card4 = new VFCS.Card();
-            this.card5 = new VFCS.Card();
-            this.card6 = new VFCS.Card();
-            this.card7 = new VFCS.Card();
+            this.cardClientReg = new VFCS.Card();
+            this.cardModelConf = new VFCS.Card();
+            this.cardewManager = new VFCS.Card();
+            this.cardService = new VFCS.Card();
+            this.cardSSW = new VFCS.Card();
+            this.iconButtonExit = new FontAwesome.Sharp.IconButton();
+            this.iconButtonPromo = new FontAwesome.Sharp.IconButton();
+            this.iconButtonServices = new FontAwesome.Sharp.IconButton();
+            this.iconButtonModelConf = new FontAwesome.Sharp.IconButton();
+            this.iconButtonClient = new FontAwesome.Sharp.IconButton();
+            this.iconButtonEW = new FontAwesome.Sharp.IconButton();
+            this.iconButtonSSW = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelTop
+            // 
+            this.panelTop.Size = new System.Drawing.Size(815, 45);
             // 
             // cardPromotion
             // 
@@ -49,168 +61,301 @@ namespace VFCS
             this.cardPromotion.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.cardPromotion.ForeColorDescrition = System.Drawing.Color.Black;
             this.cardPromotion.ForeColorHeader = System.Drawing.Color.White;
-            this.cardPromotion.Location = new System.Drawing.Point(32, 107);
+            this.cardPromotion.Location = new System.Drawing.Point(15, 271);
             this.cardPromotion.Margin = new System.Windows.Forms.Padding(0);
             this.cardPromotion.Name = "cardPromotion";
-            this.cardPromotion.Size = new System.Drawing.Size(160, 100);
-            this.cardPromotion.TabIndex = 4;
+            this.cardPromotion.Size = new System.Drawing.Size(246, 100);
+            this.cardPromotion.TabIndex = 1;
             this.cardPromotion.Text = "Перейти";
             this.cardPromotion.TextDescrition = "";
             this.cardPromotion.TextHeader = "АКЦИИ";
+            this.cardPromotion.Visible = false;
             this.cardPromotion.Click += new System.EventHandler(this.cardPromotion_Click);
             // 
-            // card2
+            // cardClientReg
             // 
-            this.card2.BackColor = System.Drawing.Color.White;
-            this.card2.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card2.Font = new System.Drawing.Font("Arial", 9F);
-            this.card2.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card2.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card2.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card2.ForeColorHeader = System.Drawing.Color.White;
-            this.card2.Location = new System.Drawing.Point(535, 271);
-            this.card2.Margin = new System.Windows.Forms.Padding(0);
-            this.card2.Name = "card2";
-            this.card2.Size = new System.Drawing.Size(225, 100);
-            this.card2.TabIndex = 5;
-            this.card2.Text = "Перейти";
-            this.card2.TextDescrition = "";
-            this.card2.TextHeader = "TODO";
+            this.cardClientReg.BackColor = System.Drawing.Color.White;
+            this.cardClientReg.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.cardClientReg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cardClientReg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardClientReg.Font = new System.Drawing.Font("Arial", 9F);
+            this.cardClientReg.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
+            this.cardClientReg.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.cardClientReg.ForeColorDescrition = System.Drawing.Color.Black;
+            this.cardClientReg.ForeColorHeader = System.Drawing.Color.White;
+            this.cardClientReg.Location = new System.Drawing.Point(15, 387);
+            this.cardClientReg.Margin = new System.Windows.Forms.Padding(0);
+            this.cardClientReg.Name = "cardClientReg";
+            this.cardClientReg.Size = new System.Drawing.Size(246, 100);
+            this.cardClientReg.TabIndex = 4;
+            this.cardClientReg.Text = "Перейти";
+            this.cardClientReg.TextDescrition = "";
+            this.cardClientReg.TextHeader = "КЛИЕНТСКАЯ ЗАПИСЬ";
+            this.cardClientReg.Visible = false;
+            this.cardClientReg.Click += new System.EventHandler(this.cardClientReg_Click);
             // 
-            // card3
+            // cardModelConf
             // 
-            this.card3.BackColor = System.Drawing.Color.White;
-            this.card3.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card3.Font = new System.Drawing.Font("Arial", 9F);
-            this.card3.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card3.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card3.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card3.ForeColorHeader = System.Drawing.Color.White;
-            this.card3.Location = new System.Drawing.Point(286, 271);
-            this.card3.Margin = new System.Windows.Forms.Padding(0);
-            this.card3.Name = "card3";
-            this.card3.Size = new System.Drawing.Size(223, 100);
-            this.card3.TabIndex = 6;
-            this.card3.Text = "Перейти";
-            this.card3.TextDescrition = "";
-            this.card3.TextHeader = "КЛИЕНТСКАЯ ЗАПИСЬ";
+            this.cardModelConf.BackColor = System.Drawing.Color.White;
+            this.cardModelConf.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.cardModelConf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cardModelConf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardModelConf.Font = new System.Drawing.Font("Arial", 9F);
+            this.cardModelConf.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
+            this.cardModelConf.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.cardModelConf.ForeColorDescrition = System.Drawing.Color.Black;
+            this.cardModelConf.ForeColorHeader = System.Drawing.Color.White;
+            this.cardModelConf.Location = new System.Drawing.Point(538, 271);
+            this.cardModelConf.Margin = new System.Windows.Forms.Padding(0);
+            this.cardModelConf.Name = "cardModelConf";
+            this.cardModelConf.Size = new System.Drawing.Size(246, 100);
+            this.cardModelConf.TabIndex = 3;
+            this.cardModelConf.Text = "Перейти";
+            this.cardModelConf.TextDescrition = "";
+            this.cardModelConf.TextHeader = "КОНФИГУРАЦИИ / МОДЕЛИ";
+            this.cardModelConf.Visible = false;
+            this.cardModelConf.Click += new System.EventHandler(this.cardModelConf_Click);
             // 
-            // card4
+            // cardewManager
             // 
-            this.card4.BackColor = System.Drawing.Color.White;
-            this.card4.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card4.Font = new System.Drawing.Font("Arial", 9F);
-            this.card4.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card4.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card4.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card4.ForeColorHeader = System.Drawing.Color.White;
-            this.card4.Location = new System.Drawing.Point(32, 271);
-            this.card4.Margin = new System.Windows.Forms.Padding(0);
-            this.card4.Name = "card4";
-            this.card4.Size = new System.Drawing.Size(230, 100);
-            this.card4.TabIndex = 7;
-            this.card4.Text = "Перейти";
-            this.card4.TextDescrition = "";
-            this.card4.TextHeader = "МОДЕЛЬНЫЙ РЯД";
+            this.cardewManager.BackColor = System.Drawing.Color.White;
+            this.cardewManager.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.cardewManager.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cardewManager.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardewManager.Font = new System.Drawing.Font("Arial", 9F);
+            this.cardewManager.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
+            this.cardewManager.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.cardewManager.ForeColorDescrition = System.Drawing.Color.Black;
+            this.cardewManager.ForeColorHeader = System.Drawing.Color.White;
+            this.cardewManager.Location = new System.Drawing.Point(276, 387);
+            this.cardewManager.Margin = new System.Windows.Forms.Padding(0);
+            this.cardewManager.Name = "cardewManager";
+            this.cardewManager.Size = new System.Drawing.Size(247, 100);
+            this.cardewManager.TabIndex = 5;
+            this.cardewManager.Text = "Перейти";
+            this.cardewManager.TextDescrition = "";
+            this.cardewManager.TextHeader = "Менеджер приёмки";
+            this.cardewManager.Visible = false;
+            this.cardewManager.Click += new System.EventHandler(this.cardewManager_Click);
             // 
-            // card5
+            // cardService
             // 
-            this.card5.BackColor = System.Drawing.Color.White;
-            this.card5.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card5.Font = new System.Drawing.Font("Arial", 9F);
-            this.card5.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card5.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card5.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card5.ForeColorHeader = System.Drawing.Color.White;
-            this.card5.Location = new System.Drawing.Point(600, 107);
-            this.card5.Margin = new System.Windows.Forms.Padding(0);
-            this.card5.Name = "card5";
-            this.card5.Size = new System.Drawing.Size(160, 100);
-            this.card5.TabIndex = 8;
-            this.card5.Text = "Перейти";
-            this.card5.TextDescrition = "";
-            this.card5.TextHeader = "СКЛАД";
+            this.cardService.BackColor = System.Drawing.Color.White;
+            this.cardService.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.cardService.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cardService.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardService.Font = new System.Drawing.Font("Arial", 9F);
+            this.cardService.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
+            this.cardService.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.cardService.ForeColorDescrition = System.Drawing.Color.Black;
+            this.cardService.ForeColorHeader = System.Drawing.Color.White;
+            this.cardService.Location = new System.Drawing.Point(276, 271);
+            this.cardService.Margin = new System.Windows.Forms.Padding(0);
+            this.cardService.Name = "cardService";
+            this.cardService.Size = new System.Drawing.Size(247, 100);
+            this.cardService.TabIndex = 2;
+            this.cardService.Text = "Перейти";
+            this.cardService.TextDescrition = "";
+            this.cardService.TextHeader = "СЕРВИСЫ";
+            this.cardService.Visible = false;
+            this.cardService.Click += new System.EventHandler(this.cardService_Click);
             // 
-            // card6
+            // cardSSW
             // 
-            this.card6.BackColor = System.Drawing.Color.White;
-            this.card6.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card6.Font = new System.Drawing.Font("Arial", 9F);
-            this.card6.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card6.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card6.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card6.ForeColorHeader = System.Drawing.Color.White;
-            this.card6.Location = new System.Drawing.Point(408, 107);
-            this.card6.Margin = new System.Windows.Forms.Padding(0);
-            this.card6.Name = "card6";
-            this.card6.Size = new System.Drawing.Size(160, 100);
-            this.card6.TabIndex = 9;
-            this.card6.Text = "Перейти";
-            this.card6.TextDescrition = "";
-            this.card6.TextHeader = "РАБОТНИКИ";
+            this.cardSSW.BackColor = System.Drawing.Color.White;
+            this.cardSSW.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.cardSSW.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.cardSSW.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cardSSW.Font = new System.Drawing.Font("Arial", 9F);
+            this.cardSSW.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
+            this.cardSSW.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.cardSSW.ForeColorDescrition = System.Drawing.Color.Black;
+            this.cardSSW.ForeColorHeader = System.Drawing.Color.White;
+            this.cardSSW.Location = new System.Drawing.Point(538, 387);
+            this.cardSSW.Margin = new System.Windows.Forms.Padding(0);
+            this.cardSSW.Name = "cardSSW";
+            this.cardSSW.Size = new System.Drawing.Size(246, 100);
+            this.cardSSW.TabIndex = 6;
+            this.cardSSW.Text = "Перейти";
+            this.cardSSW.TextDescrition = "";
+            this.cardSSW.TextHeader = "Сервесный работник";
+            this.cardSSW.Visible = false;
+            this.cardSSW.Click += new System.EventHandler(this.cardSSW_Click);
             // 
-            // card7
+            // iconButtonExit
             // 
-            this.card7.BackColor = System.Drawing.Color.White;
-            this.card7.BackColorCurtain = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.card7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.card7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card7.Font = new System.Drawing.Font("Arial", 9F);
-            this.card7.FontDescrition = new System.Drawing.Font("Arial", 8.25F);
-            this.card7.FontHeader = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.card7.ForeColorDescrition = System.Drawing.Color.Black;
-            this.card7.ForeColorHeader = System.Drawing.Color.White;
-            this.card7.Location = new System.Drawing.Point(222, 107);
-            this.card7.Margin = new System.Windows.Forms.Padding(0);
-            this.card7.Name = "card7";
-            this.card7.Size = new System.Drawing.Size(160, 100);
-            this.card7.TabIndex = 10;
-            this.card7.Text = "Перейти";
-            this.card7.TextDescrition = "";
-            this.card7.TextHeader = "ДОЛЖНОСТИ";
+            this.iconButtonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonExit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonExit.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.iconButtonExit.IconColor = System.Drawing.Color.Black;
+            this.iconButtonExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonExit.Location = new System.Drawing.Point(696, 101);
+            this.iconButtonExit.Name = "iconButtonExit";
+            this.iconButtonExit.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonExit.TabIndex = 7;
+            this.iconButtonExit.Tag = "Выход";
+            this.iconButtonExit.Text = "Выход";
+            this.iconButtonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonExit.UseVisualStyleBackColor = false;
+            this.iconButtonExit.Click += new System.EventHandler(this.iconButtonExit_Click);
+            // 
+            // iconButtonPromo
+            // 
+            this.iconButtonPromo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonPromo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonPromo.IconChar = FontAwesome.Sharp.IconChar.Ad;
+            this.iconButtonPromo.IconColor = System.Drawing.Color.Black;
+            this.iconButtonPromo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonPromo.Location = new System.Drawing.Point(15, 100);
+            this.iconButtonPromo.Name = "iconButtonPromo";
+            this.iconButtonPromo.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonPromo.TabIndex = 8;
+            this.iconButtonPromo.Text = "Акции";
+            this.iconButtonPromo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonPromo.UseVisualStyleBackColor = false;
+            this.iconButtonPromo.Click += new System.EventHandler(this.iconButtonPromo_Click);
+            // 
+            // iconButtonServices
+            // 
+            this.iconButtonServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonServices.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonServices.IconChar = FontAwesome.Sharp.IconChar.Servicestack;
+            this.iconButtonServices.IconColor = System.Drawing.Color.Black;
+            this.iconButtonServices.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonServices.Location = new System.Drawing.Point(125, 100);
+            this.iconButtonServices.Name = "iconButtonServices";
+            this.iconButtonServices.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonServices.TabIndex = 9;
+            this.iconButtonServices.Text = "Сервисы";
+            this.iconButtonServices.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonServices.UseVisualStyleBackColor = false;
+            this.iconButtonServices.Click += new System.EventHandler(this.iconButtonServices_Click);
+            // 
+            // iconButtonModelConf
+            // 
+            this.iconButtonModelConf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonModelConf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonModelConf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonModelConf.IconChar = FontAwesome.Sharp.IconChar.CarSide;
+            this.iconButtonModelConf.IconColor = System.Drawing.Color.Black;
+            this.iconButtonModelConf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonModelConf.Location = new System.Drawing.Point(235, 100);
+            this.iconButtonModelConf.Name = "iconButtonModelConf";
+            this.iconButtonModelConf.Size = new System.Drawing.Size(122, 84);
+            this.iconButtonModelConf.TabIndex = 10;
+            this.iconButtonModelConf.Text = "Модели / Конфигурации";
+            this.iconButtonModelConf.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonModelConf.UseVisualStyleBackColor = false;
+            this.iconButtonModelConf.Click += new System.EventHandler(this.iconButtonModelConf_Click);
+            // 
+            // iconButtonClient
+            // 
+            this.iconButtonClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonClient.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonClient.IconChar = FontAwesome.Sharp.IconChar.Phone;
+            this.iconButtonClient.IconColor = System.Drawing.Color.Black;
+            this.iconButtonClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonClient.Location = new System.Drawing.Point(363, 100);
+            this.iconButtonClient.Name = "iconButtonClient";
+            this.iconButtonClient.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonClient.TabIndex = 11;
+            this.iconButtonClient.Text = "Клиентская запись";
+            this.iconButtonClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonClient.UseVisualStyleBackColor = false;
+            this.iconButtonClient.Click += new System.EventHandler(this.iconButtonClient_Click);
+            // 
+            // iconButtonEW
+            // 
+            this.iconButtonEW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonEW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonEW.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonEW.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.iconButtonEW.IconColor = System.Drawing.Color.Black;
+            this.iconButtonEW.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonEW.Location = new System.Drawing.Point(473, 100);
+            this.iconButtonEW.Name = "iconButtonEW";
+            this.iconButtonEW.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonEW.TabIndex = 12;
+            this.iconButtonEW.Text = "Менеджер приёмки";
+            this.iconButtonEW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonEW.UseVisualStyleBackColor = false;
+            this.iconButtonEW.Click += new System.EventHandler(this.iconButtonEW_Click);
+            // 
+            // iconButtonSSW
+            // 
+            this.iconButtonSSW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.iconButtonSSW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonSSW.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonSSW.IconChar = FontAwesome.Sharp.IconChar.Wrench;
+            this.iconButtonSSW.IconColor = System.Drawing.Color.Black;
+            this.iconButtonSSW.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonSSW.Location = new System.Drawing.Point(583, 100);
+            this.iconButtonSSW.Name = "iconButtonSSW";
+            this.iconButtonSSW.Size = new System.Drawing.Size(104, 84);
+            this.iconButtonSSW.TabIndex = 13;
+            this.iconButtonSSW.Text = "Сервисный работник";
+            this.iconButtonSSW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButtonSSW.UseVisualStyleBackColor = false;
+            this.iconButtonSSW.Click += new System.EventHandler(this.iconButtonSSW_Click);
             // 
             // adminStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.card7);
-            this.Controls.Add(this.card6);
-            this.Controls.Add(this.card5);
-            this.Controls.Add(this.card4);
-            this.Controls.Add(this.card3);
-            this.Controls.Add(this.card2);
+            this.ClientSize = new System.Drawing.Size(815, 200);
+            this.Controls.Add(this.iconButtonSSW);
+            this.Controls.Add(this.iconButtonEW);
+            this.Controls.Add(this.iconButtonClient);
+            this.Controls.Add(this.iconButtonModelConf);
+            this.Controls.Add(this.iconButtonServices);
+            this.Controls.Add(this.iconButtonPromo);
+            this.Controls.Add(this.iconButtonExit);
+            this.Controls.Add(this.cardSSW);
+            this.Controls.Add(this.cardService);
+            this.Controls.Add(this.cardewManager);
+            this.Controls.Add(this.cardModelConf);
+            this.Controls.Add(this.cardClientReg);
             this.Controls.Add(this.cardPromotion);
             this.Name = "adminStartForm";
             this.Text = "adminStartForm";
+            this.Load += new System.EventHandler(this.adminStartForm_Load);
+            this.Controls.SetChildIndex(this.panelTop, 0);
             this.Controls.SetChildIndex(this.cardPromotion, 0);
-            this.Controls.SetChildIndex(this.card2, 0);
-            this.Controls.SetChildIndex(this.card3, 0);
-            this.Controls.SetChildIndex(this.card4, 0);
-            this.Controls.SetChildIndex(this.card5, 0);
-            this.Controls.SetChildIndex(this.card6, 0);
-            this.Controls.SetChildIndex(this.card7, 0);
+            this.Controls.SetChildIndex(this.cardClientReg, 0);
+            this.Controls.SetChildIndex(this.cardModelConf, 0);
+            this.Controls.SetChildIndex(this.cardewManager, 0);
+            this.Controls.SetChildIndex(this.cardService, 0);
+            this.Controls.SetChildIndex(this.cardSSW, 0);
+            this.Controls.SetChildIndex(this.iconButtonExit, 0);
+            this.Controls.SetChildIndex(this.iconButtonPromo, 0);
+            this.Controls.SetChildIndex(this.iconButtonServices, 0);
+            this.Controls.SetChildIndex(this.iconButtonModelConf, 0);
+            this.Controls.SetChildIndex(this.iconButtonClient, 0);
+            this.Controls.SetChildIndex(this.iconButtonEW, 0);
+            this.Controls.SetChildIndex(this.iconButtonSSW, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Card cardPromotion;
-        private Card card2;
-        private Card card3;
-        private Card card4;
-        private Card card5;
-        private Card card6;
-        private Card card7;
+        private Card cardClientReg;
+        private Card cardModelConf;
+        private Card cardewManager;
+        private Card cardService;
+        private Card cardSSW;
+        private FontAwesome.Sharp.IconButton iconButtonExit;
+        private FontAwesome.Sharp.IconButton iconButtonPromo;
+        private FontAwesome.Sharp.IconButton iconButtonServices;
+        private FontAwesome.Sharp.IconButton iconButtonModelConf;
+        private FontAwesome.Sharp.IconButton iconButtonClient;
+        private FontAwesome.Sharp.IconButton iconButtonEW;
+        private FontAwesome.Sharp.IconButton iconButtonSSW;
     }
 }
