@@ -39,12 +39,12 @@ namespace VFCS.Forms.Marketer
             this.metroLabelDescriptionFull = new MetroFramework.Controls.MetroLabel();
             this.metroLabelImgName = new MetroFramework.Controls.MetroLabel();
             this.metroLabelWaringFootnote = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBoxSale = new MetroFramework.Controls.MetroTextBox();
             this.buttonExit = new VFCS.Button_();
             this.buttonClear = new VFCS.Button_();
             this.buttonUpdate = new VFCS.Button_();
             this.buttonCheckImg = new VFCS.Button_();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBoxSale = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPromoImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,6 +239,47 @@ namespace VFCS.Forms.Marketer
             this.metroLabelWaringFootnote.TabIndex = 9;
             this.metroLabelWaringFootnote.Text = "*если акция не имеет фотографии \r\nоставте поле пустым";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(383, 165);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel1.TabIndex = 41;
+            this.metroLabel1.Text = "Скидка:";
+            // 
+            // metroTextBoxSale
+            // 
+            // 
+            // 
+            // 
+            this.metroTextBoxSale.CustomButton.Image = null;
+            this.metroTextBoxSale.CustomButton.Location = new System.Drawing.Point(167, 2);
+            this.metroTextBoxSale.CustomButton.Name = "";
+            this.metroTextBoxSale.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.metroTextBoxSale.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBoxSale.CustomButton.TabIndex = 1;
+            this.metroTextBoxSale.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBoxSale.CustomButton.UseSelectable = true;
+            this.metroTextBoxSale.CustomButton.Visible = false;
+            this.metroTextBoxSale.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.metroTextBoxSale.Lines = new string[0];
+            this.metroTextBoxSale.Location = new System.Drawing.Point(387, 186);
+            this.metroTextBoxSale.MaxLength = 32767;
+            this.metroTextBoxSale.Name = "metroTextBoxSale";
+            this.metroTextBoxSale.PasswordChar = '\0';
+            this.metroTextBoxSale.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBoxSale.SelectedText = "";
+            this.metroTextBoxSale.SelectionLength = 0;
+            this.metroTextBoxSale.SelectionStart = 0;
+            this.metroTextBoxSale.ShortcutsEnabled = true;
+            this.metroTextBoxSale.Size = new System.Drawing.Size(195, 30);
+            this.metroTextBoxSale.TabIndex = 40;
+            this.metroTextBoxSale.UseSelectable = true;
+            this.metroTextBoxSale.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBoxSale.WaterMarkFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.metroTextBoxSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox1_KeyPress);
+            // 
             // buttonExit
             // 
             this.buttonExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -351,47 +392,6 @@ namespace VFCS.Forms.Marketer
             this.buttonCheckImg.UseZoomEffectOnHover = false;
             this.buttonCheckImg.Click += new System.EventHandler(this.buttonCheckImg_Click);
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(383, 165);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel1.TabIndex = 41;
-            this.metroLabel1.Text = "Скидка:";
-            // 
-            // metroTextBoxSale
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBoxSale.CustomButton.Image = null;
-            this.metroTextBoxSale.CustomButton.Location = new System.Drawing.Point(167, 2);
-            this.metroTextBoxSale.CustomButton.Name = "";
-            this.metroTextBoxSale.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBoxSale.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBoxSale.CustomButton.TabIndex = 1;
-            this.metroTextBoxSale.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBoxSale.CustomButton.UseSelectable = true;
-            this.metroTextBoxSale.CustomButton.Visible = false;
-            this.metroTextBoxSale.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBoxSale.Lines = new string[0];
-            this.metroTextBoxSale.Location = new System.Drawing.Point(387, 186);
-            this.metroTextBoxSale.MaxLength = 32767;
-            this.metroTextBoxSale.Name = "metroTextBoxSale";
-            this.metroTextBoxSale.PasswordChar = '\0';
-            this.metroTextBoxSale.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBoxSale.SelectedText = "";
-            this.metroTextBoxSale.SelectionLength = 0;
-            this.metroTextBoxSale.SelectionStart = 0;
-            this.metroTextBoxSale.ShortcutsEnabled = true;
-            this.metroTextBoxSale.Size = new System.Drawing.Size(195, 30);
-            this.metroTextBoxSale.TabIndex = 40;
-            this.metroTextBoxSale.UseSelectable = true;
-            this.metroTextBoxSale.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBoxSale.WaterMarkFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.metroTextBoxSale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.metroTextBox1_KeyPress);
-            // 
             // editPromotionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,8 +413,10 @@ namespace VFCS.Forms.Marketer
             this.Controls.Add(this.metroTextBoxFullDescription);
             this.Controls.Add(this.metroTextBoxShortDescription);
             this.Controls.Add(this.metroTextBoxNamePromo);
+            this.MaximizeBox = false;
             this.Name = "editPromotionForm";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
+            this.Resizable = false;
             this.Load += new System.EventHandler(this.editPromotionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPromoImg)).EndInit();
             this.ResumeLayout(false);

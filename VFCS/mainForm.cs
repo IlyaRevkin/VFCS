@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,8 @@ namespace VFCS
     {
         public mainForm()
         {
+            Icon = Properties.Resources.iconICO;
+
             InitializeComponent();
 
             Animator.Start();
@@ -43,6 +46,9 @@ namespace VFCS
             metroStyleManager1 = Setting_.StyleForm();
 
             StyleManager = metroStyleManager1;
+
+            Icon = Properties.Resources.iconICO;
+
         }
 
         private void iconButtonSetting_Click(object sender, EventArgs e)

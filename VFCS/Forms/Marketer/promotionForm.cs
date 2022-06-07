@@ -30,6 +30,8 @@ namespace VFCS
         public promotionForm()
         {
             InitializeComponent();
+
+            CollapseMenu();
         }
 
         //[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -37,40 +39,7 @@ namespace VFCS
         //[DllImport("user32.DLL", EntryPoint = "SendMessage")]
         //private extern static void SendMessage(IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void pictureBoxExit_Click_1(object sender, EventArgs e)
-        {
-            if (true) // User Admin
-            {
-                adminStartForm asf = new adminStartForm();
-                asf.Show();
-                Close();
-            }
-            if (false) // User Promotion 
-            {
-
-            }
-
-            Connection.userEmployeeId = 0;
-            Connection.userRole = "";
-
-            mainForm mf = new mainForm();
-            mf.Show();
-            Close();
-        }
-
-        private void buttonArchivePromotion_Click(object sender, EventArgs e)
-        {
-            //buttonArchivePromotion.BackColor = FlatColors.LightGray;
-            //buttonActivePromotion.BackColor = FlatColors.GrayLight;
-        }
-
-        private void buttonActivePromotion_Click(object sender, EventArgs e)
-        {
-            //buttonArchivePromotion.BackColor = FlatColors.GrayLight;
-            //buttonActivePromotion.BackColor = FlatColors.LightGray;
-        }
-
-        private void iconButtonMenu_Click(object sender, EventArgs e)
+        private void iconButtonMenu_Click_1(object sender, EventArgs e)
         {
             CollapseMenu();
         }
@@ -83,16 +52,13 @@ namespace VFCS
                 //button_1.Visible = false;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
-                    if (menuButton != iconButtonMenu)
-                    {
-                        //iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
-                        //menuButton.ForeColor = FlatColors.Blue;
-                        menuButton.BackColor = FlatColors.Blue;
-                        menuButton.FlatStyle = FlatStyle.Flat;
-                        menuButton.Text = "";
-                        menuButton.ImageAlign = ContentAlignment.MiddleCenter;
-                        menuButton.Padding = new Padding(0);
-                    }
+                    //iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.EllipsisV;
+                    //menuButton.ForeColor = FlatColors.Blue;
+                    menuButton.BackColor = FlatColors.Blue;
+                    menuButton.FlatStyle = FlatStyle.Flat;
+                    menuButton.Text = "";
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(0);
                 }
             }
             else
@@ -101,15 +67,12 @@ namespace VFCS
                 //button_1.Visible = true;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
-                    if (menuButton != iconButtonMenu)
-                    {
-                        //iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.EllipsisH;
-                        //menuButton.ForeColor = FlatColors.Blue;
-                        menuButton.BackColor = FlatColors.Blue;
-                        menuButton.Text = menuButton.Tag.ToString();
-                        menuButton.ImageAlign = ContentAlignment.MiddleCenter;
-                        menuButton.Padding = new Padding(10, 0, 0, 0);
-                    }
+                    //iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.EllipsisH;
+                    //menuButton.ForeColor = FlatColors.Blue;
+                    menuButton.BackColor = FlatColors.Blue;
+                    menuButton.Text = menuButton.Tag.ToString();
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
             }
         }
@@ -126,6 +89,7 @@ namespace VFCS
             {
                 //Connection.userLogin = "";
                 Connection.userRole = "";
+                Connection.userEmployeeId = 0;
 
                 mainForm mf = new mainForm();
                 mf.Show();
@@ -135,17 +99,10 @@ namespace VFCS
 
         private void promotionForm_Load(object sender, EventArgs e)
         {
-            CollapseMenu();
-
-            Animator.Start();
-
-            MaximizeBox = true;
+            buttonAdd.BackColor = FlatColors.Blue;
 
             Padding = new Padding(borderSize);
             BackColor = Color.FromArgb(98, 102, 244);
-
-            iconButtonMenu.ForeColor = FlatColors.BlueDark;
-            iconButtonMenu.BackColor = FlatColors.BlueDark;
 
             panelMenu.BackColor = FlatColors.Blue;
 
@@ -175,6 +132,7 @@ namespace VFCS
             {
                 buttonDelete.Enabled = false;
                 buttonArchive.Enabled = false;
+                buttonEdit.Enabled = false;
             }
 
             //activePromoPage = true;
@@ -272,6 +230,8 @@ namespace VFCS
 
         private void promoCard_Click(object sender, EventArgs e)
         {
+            
+
             var card = (Card)sender;
 
             for (int i = activePromo.Count - 1; i > -1; i--)
@@ -282,14 +242,25 @@ namespace VFCS
 
             if (selectCard == card)
             {
+                if (Connection.userRole == "adm")
+                {
+                    buttonDelete.Enabled = false;
+                    buttonDelete.BackColor = FlatColors.LightGray;
+                }
+
                 selectCard = null;
+                buttonArchive.BackColor = FlatColors.GrayDark;
+                buttonEdit.BackColor = FlatColors.GrayDark;
                 buttonArchive.Enabled = false;
-                buttonDelete.Enabled = false;
+                buttonEdit.Enabled = false;
             }
             else
             {
                 if (Connection.userRole == "adm")
+                {
                     buttonDelete.Enabled = true;
+                    buttonDelete.BackColor = FlatColors.Blue;
+                } 
 
                 selectCard = card;
                 card.BackColorCurtain = FlatColors.Red;
@@ -297,6 +268,9 @@ namespace VFCS
                 //pan.LineWidth = 4.0F;
 
                 buttonArchive.Enabled = true;
+                buttonEdit.Enabled = true;
+                buttonArchive.BackColor = FlatColors.Blue;
+                buttonEdit.BackColor = FlatColors.Blue;
             }
             card.Invalidate();
 
@@ -389,6 +363,11 @@ namespace VFCS
                     {
                         MessageBox.Show("Change status successful");
                         Connection.connection.Close();
+
+                        buttonEdit.BackColor = FlatColors.GrayDark;
+                        buttonArchive.BackColor = FlatColors.GrayDark;
+                        buttonDelete.BackColor = FlatColors.GrayDark;
+
                         promotionForm_Load(sender, e);
                     }
                     else

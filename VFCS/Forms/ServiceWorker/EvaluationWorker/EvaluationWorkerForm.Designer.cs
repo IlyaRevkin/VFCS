@@ -42,6 +42,7 @@ namespace VFCS
             this.buttonTimeless = new VFCS.Button_();
             this.buttonCurrent = new VFCS.Button_();
             this.iconButtonExit = new FontAwesome.Sharp.IconButton();
+            this.labelFreeMaster = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTop.SuspendLayout();
             this.groupBoxButtonReg.SuspendLayout();
@@ -345,11 +346,22 @@ namespace VFCS
             this.iconButtonExit.UseVisualStyleBackColor = false;
             this.iconButtonExit.Click += new System.EventHandler(this.iconButtonExit_Click);
             // 
+            // labelFreeMaster
+            // 
+            this.labelFreeMaster.AutoSize = true;
+            this.labelFreeMaster.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFreeMaster.Location = new System.Drawing.Point(404, 83);
+            this.labelFreeMaster.Name = "labelFreeMaster";
+            this.labelFreeMaster.Size = new System.Drawing.Size(267, 18);
+            this.labelFreeMaster.TabIndex = 20;
+            this.labelFreeMaster.Text = "Cвободных сервесных работников:";
+            // 
             // EvaluationWorkerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 270);
+            this.Controls.Add(this.labelFreeMaster);
             this.Controls.Add(this.iconButtonExit);
             this.Controls.Add(this.buttonCurrent);
             this.Controls.Add(this.buttonTimeless);
@@ -364,10 +376,12 @@ namespace VFCS
             this.Controls.SetChildIndex(this.buttonCurrent, 0);
             this.Controls.SetChildIndex(this.iconButtonExit, 0);
             this.Controls.SetChildIndex(this.panelTop, 0);
+            this.Controls.SetChildIndex(this.labelFreeMaster, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.groupBoxButtonReg.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -386,5 +400,6 @@ namespace VFCS
         private Button_ buttonTimeless;
         private Button_ buttonCurrent;
         private FontAwesome.Sharp.IconButton iconButtonExit;
+        private System.Windows.Forms.Label labelFreeMaster;
     }
 }

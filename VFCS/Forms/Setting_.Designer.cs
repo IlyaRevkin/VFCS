@@ -30,6 +30,7 @@ namespace VFCS.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting_));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.mcbTheme = new MetroFramework.Controls.MetroComboBox();
             this.mcbColor = new MetroFramework.Controls.MetroComboBox();
@@ -110,6 +111,7 @@ namespace VFCS.Forms
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.mcbTheme);
             this.Controls.Add(this.metroLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Setting_";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Setting_FormClosed);
             this.Load += new System.EventHandler(this.Setting_Load);

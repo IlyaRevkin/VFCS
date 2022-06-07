@@ -44,7 +44,7 @@ namespace VFCS
             this.panelMain = new VFCS.Classes.Style.Controls.Panel_();
             this.panelColor1 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.iconButtonSetting = new FontAwesome.Sharp.IconButton();
+            this.iconButtonMenu = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButtonExit = new FontAwesome.Sharp.IconButton();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -53,7 +53,6 @@ namespace VFCS
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconButtonActivePromotion = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.iconButtonMenu = new FontAwesome.Sharp.IconButton();
             this.panel7 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelTop.SuspendLayout();
@@ -63,7 +62,6 @@ namespace VFCS
             this.panelMainContainer.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -286,7 +284,7 @@ namespace VFCS
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Transparent;
-            this.panelMenu.Controls.Add(this.iconButtonSetting);
+            this.panelMenu.Controls.Add(this.iconButtonMenu);
             this.panelMenu.Controls.Add(this.panel6);
             this.panelMenu.Controls.Add(this.iconButtonExit);
             this.panelMenu.Controls.Add(this.panel5);
@@ -299,25 +297,25 @@ namespace VFCS
             this.panelMenu.Size = new System.Drawing.Size(165, 375);
             this.panelMenu.TabIndex = 2;
             // 
-            // iconButtonSetting
+            // iconButtonMenu
             // 
-            this.iconButtonSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButtonSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonSetting.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.iconButtonSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.EllipsisH;
-            this.iconButtonSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.iconButtonSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonSetting.IconSize = 25;
-            this.iconButtonSetting.Location = new System.Drawing.Point(0, 300);
-            this.iconButtonSetting.Name = "iconButtonSetting";
-            this.iconButtonSetting.Size = new System.Drawing.Size(165, 30);
-            this.iconButtonSetting.TabIndex = 8;
-            this.iconButtonSetting.Tag = "Настройки";
-            this.iconButtonSetting.Text = "iconButton3";
-            this.iconButtonSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSetting.UseVisualStyleBackColor = true;
-            this.iconButtonSetting.Visible = false;
+            this.iconButtonMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.iconButtonMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.iconButtonMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.iconButtonMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.iconButtonMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonMenu.IconSize = 20;
+            this.iconButtonMenu.Location = new System.Drawing.Point(0, 300);
+            this.iconButtonMenu.Name = "iconButtonMenu";
+            this.iconButtonMenu.Size = new System.Drawing.Size(165, 30);
+            this.iconButtonMenu.TabIndex = 8;
+            this.iconButtonMenu.Tag = "Развернуть меню";
+            this.iconButtonMenu.Text = "Развернуть меню";
+            this.iconButtonMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonMenu.UseVisualStyleBackColor = false;
+            this.iconButtonMenu.Click += new System.EventHandler(this.iconButtonMenu_Click_1);
             // 
             // panel6
             // 
@@ -421,25 +419,8 @@ namespace VFCS
             this.panel2.Size = new System.Drawing.Size(90, 45);
             this.panel2.TabIndex = 4;
             // 
-            // iconButtonMenu
-            // 
-            this.iconButtonMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.iconButtonMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.iconButtonMenu.IconColor = System.Drawing.Color.Black;
-            this.iconButtonMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonMenu.IconSize = 25;
-            this.iconButtonMenu.Location = new System.Drawing.Point(45, 0);
-            this.iconButtonMenu.Name = "iconButtonMenu";
-            this.iconButtonMenu.Size = new System.Drawing.Size(45, 45);
-            this.iconButtonMenu.TabIndex = 4;
-            this.iconButtonMenu.UseVisualStyleBackColor = true;
-            this.iconButtonMenu.Click += new System.EventHandler(this.iconButtonMenu_Click);
-            // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.iconButtonMenu);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(76, 0);
             this.panel7.Name = "panel7";
@@ -452,7 +433,9 @@ namespace VFCS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.metroPanel2);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "promotionForm";
+            this.Resizable = false;
             this.Load += new System.EventHandler(this.promotionForm_Load);
             this.Controls.SetChildIndex(this.panelTop, 0);
             this.Controls.SetChildIndex(this.metroPanel2, 0);
@@ -464,7 +447,6 @@ namespace VFCS
             this.panelMainContainer.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -485,7 +467,6 @@ namespace VFCS
         public Classes.Style.Controls.Panel_ panelMainContainer;
         private System.Windows.Forms.Panel panelColor1;
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton iconButtonSetting;
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton iconButtonExit;
         private System.Windows.Forms.Panel panel5;
@@ -494,7 +475,7 @@ namespace VFCS
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton iconButtonActivePromotion;
         private System.Windows.Forms.Panel panel7;
-        private FontAwesome.Sharp.IconButton iconButtonMenu;
         private Classes.Style.Controls.Panel_ panelMain;
+        private FontAwesome.Sharp.IconButton iconButtonMenu;
     }
 }

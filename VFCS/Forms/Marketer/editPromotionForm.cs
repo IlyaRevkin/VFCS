@@ -86,7 +86,7 @@ namespace VFCS.Forms.Marketer
                 string sqlExp = "UPDATE [dbo].[Promotion] SET " +
                     " [name_promotion] = @name," +
                     " [short_description_promotion] = @short," +
-                    " [description_promotion] = @full," +
+                    " [full_description_promotion] = @full," +
                     " [photo_name] = @ph_name," +
                     " [sale] = @sale" +
                     " WHERE [id_promotion] = @id_promotion";
@@ -145,7 +145,7 @@ namespace VFCS.Forms.Marketer
                 Connection.connection.Open();
 
                 string sqlExp = "SELECT [id_promotion], [name_promotion], [short_description_promotion]," +
-                    "[description_promotion], [photo_name], [sale] FROM [dbo].[Promotion]" +
+                    "[full_description_promotion], [photo_name], [sale] FROM [dbo].[Promotion]" +
                     "WHERE [id_promotion] = @id_promotion";
                 SqlCommand cmd = new SqlCommand(sqlExp, Connection.connection);
                 cmd.Parameters.AddWithValue("@id_promotion",id);
@@ -175,7 +175,7 @@ namespace VFCS.Forms.Marketer
                         if (reader[5] == DBNull.Value)
                             metroTextBoxSale.Text = "";
                         else
-                            metroTextBoxSale.Text = (string)reader[5];
+                            metroTextBoxSale.Text = reader[5].ToString();
                     }
                     reader.Close();
                 }

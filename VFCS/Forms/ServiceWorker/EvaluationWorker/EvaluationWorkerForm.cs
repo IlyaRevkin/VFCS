@@ -31,6 +31,31 @@ namespace VFCS
             dateTimePicker1.MinDate = DateTime.Now;
             dateTimePicker1.MaxDate = DateTime.Now.AddMonths(2);
 
+            //
+            try
+            {
+                Connection.connection.Open();
+
+                string sqlExp = "SELECT COUNT(id_employee) FROM [dbo].[Employee]" +
+                    " WHERE [status] = 1";
+                SqlCommand cmd = new SqlCommand(sqlExp, Connection.connection);
+
+                SqlDataReader rd = cmd.ExecuteReader();
+
+                if (rd.HasRows)
+                {
+                    while (rd.Read())
+                        labelFreeMaster.Text += " " + rd[0].ToString();
+
+                    rd.Close();
+                }
+                else
+                    MessageBox.Show("Ошибка получения расписания");
+
+                Connection.connection.Close();
+            }
+            catch (Exception ex) { MessageBox.Show("Ошибка" + ex); }
+
             //Add values in List(id, date_start, date_end) from schedule
             try
             {

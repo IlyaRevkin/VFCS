@@ -93,6 +93,16 @@ namespace VFCS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap feb23 {
+            get {
+                object obj = ResourceManager.GetObject("feb23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon {
             get {
                 object obj = ResourceManager.GetObject("icon", resourceCulture);
@@ -106,6 +116,16 @@ namespace VFCS.Properties {
         internal static System.Drawing.Icon iconICO {
             get {
                 object obj = ResourceManager.GetObject("iconICO", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon iconICO1 {
+            get {
+                object obj = ResourceManager.GetObject("iconICO1", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -163,9 +183,9 @@ namespace VFCS.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap volvo_logo_icon_145762 {
+        internal static System.Drawing.Bitmap volvo_logo_icon {
             get {
-                object obj = ResourceManager.GetObject("volvo_logo_icon_145762", resourceCulture);
+                object obj = ResourceManager.GetObject("volvo_logo_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

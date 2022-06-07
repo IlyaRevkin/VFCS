@@ -34,6 +34,13 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconICO.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net48\FontAwesome.Sharp.dll</HintPath>
@@ -368,12 +375,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\volvo_logo_icon_145762.png" />
     <None Include="Resources\SystemPhoto\ErrorPhoto\Error\error.png" />
     <None Include="Resources\SystemPhoto\Exit.png" />
     <None Include="Resources\SystemPhoto\Exit-.png" />
     <None Include="Resources\SystemPhoto\ErrorPhoto\Error\err.ico" />
+    <Content Include="iconICO.ico" />
     <Content Include="Resources\FontStyle\demo.html" />
     <None Include="Resources\SystemPhoto\Logo\PNG\icon.png" />
+    <Content Include="Resources\iconICO.ico" />
+    <None Include="Resources\PromoPhoto\feb.jpg" />
     <Content Include="Resources\SystemPhoto\Logo\ICO\iconICO.ico" />
     <Content Include="Resources\FontStyle\stylesheet.css" />
     <None Include="Resources\SystemPhoto\SettingIcon.png" />
