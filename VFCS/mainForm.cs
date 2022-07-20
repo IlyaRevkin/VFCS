@@ -123,7 +123,7 @@ namespace VFCS
                                         Connection.connection.Close();
                                         reader.Close();
 
-                                        adminStartForm asf = new adminStartForm();
+                                        adminStartForm asf = new adminStartForm(); 
                                         asf.Show();
                                         Close();
                                         break;
